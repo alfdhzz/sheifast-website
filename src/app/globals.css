@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #F9F4EB;
+  --bg-secondary: #EFE6D8;
+  --surface-white: #FFFFFF;
+  --brand-primary: #683B1E;
+  --brand-primary-hover: #4F2B14;
+  --brand-accent: #B5895A;
+  --text-primary: #2A1D15;
+  --text-secondary: #6F5E53;
+  --border-subtle: #E2D6C5;
+  --badge-sale: #9E2A2B;
+
+  --active-font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  --active-font-display: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  --active-font-brand: var(--font-playfair), Georgia, serif;
+}
+
+html,
+body {
+  background-color: #F9F4EB;
+  color: #2A1D15;
+  font-family: var(--active-font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Splash Loader Animations */
+@keyframes splashLogoIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.86) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes splashTitleIn {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes splashProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes pingSlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(1.22);
+    opacity: 0;
+  }
+}
+
+.animate-splash-logo {
+  animation: splashLogoIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-splash-title {
+  opacity: 0;
+  animation: splashTitleIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+
+.animate-splash-subtitle {
+  opacity: 0;
+  animation: splashTitleIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.28s forwards;
+}
+
+.animate-splash-progress {
+  animation: splashProgress 1.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-ping-slow {
+  animation: pingSlow 1.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+}

@@ -1,0 +1,32 @@
+# 1. Dependencies (Folder library npm yang ukurannya besar & bisa di-install ulang via npm install)
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# 2. Next.js Build & Cache (Folder hasil compile otomatis saat npm run dev / npm run build)
+/.next/
+/out/
+/build
+
+# 3. Environment Variables (File rahasia seperti API key jika nanti ada)
+.env
+.env*.local
+
+# 4. Deployment & Platform Cache
+.vercel
+
+# 5. TypeScript & Auto-generated Files
+*.tsbuildinfo
+next-env.d.ts
+
+# 6. Log & File Sistem Operasi (Windows/Mac)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+*.pem
+
+# 7. Testing
+/coverage
